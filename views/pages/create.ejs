@@ -1,0 +1,29 @@
+<%- include("../partials/head")%>
+<body>
+  <%- include("../partials/header")%>
+  <div class="page-title">
+    <div class="sec-center">
+      <h1>My Todos > Create</h1>
+    </div>
+  </div>
+  <main class="sec-center">
+    <section class="create">
+      <form action="/create" method="post" class="create-form">
+        <input type="text" name="title" placeholder="Title" />
+        <textarea
+          name="description"
+          cols="30"
+          rows="10"
+          placeholder="Description"
+        ></textarea>
+        <!-- <label for="file"
+          ><span class="material-symbols-outlined">image</span> upload
+          image</label
+        >
+        <input type="file" id="file" /> -->
+        <a href="/create"><button class="btn">create todo</button></a>
+      </form>
+    </section>
+  </main>
+</body>
+<%- include("../partials/footer")%>

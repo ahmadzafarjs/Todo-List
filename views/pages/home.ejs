@@ -1,59 +1,46 @@
 <%- include("../partials/head")%>
 <body>
   <%- include("../partials/header")%>
+  <div class="page-title">
+    <div class="sec-center">
+      <a href="/"><h1>My Todos</h1></a>
+    </div>
+  </div>
   <main class="sec-center">
     <section class="hero">
-      <h1>> My Todos</h1>
       <div class="todos-container">
         <ul class="todos">
+          <%for(let i = 0; i < todos.length; i++){%>
           <li class="todo">
-            <a href="">
+            <%if(todos[i].isCompleted){%>
+            <img
+              src="/images/completed.png"
+              alt="completed"
+              class="completed"
+            />
+            <%}%>
+            <a href="/todo/<%=todos[i]._id%>">
               <div class="todo-info">
                 <div class="todo-img"></div>
                 <div class="todo-content">
-                  <h3>Apples</h3>
-                  <p>Lorem ipsum dolor, sit...</p>
+                  <h3><%=todos[i].title%></h3>
+                  <p><%=todos[i].description.slice(0, 15)%>......</p>
                 </div>
               </div>
             </a>
             <div class="todo-btns">
-              <span class="material-symbols-outlined"> task_alt </span>
-              <span class="material-symbols-outlined"> cancel </span>
+              <a href="/edit/<%=todos[i]._id%>">
+                <span class="material-symbols-outlined"> edit_note </span></a
+              >
+              <a href="/completed/<%=todos[i]._id%>">
+                <span class="material-symbols-outlined"> task_alt </span></a
+              >
+              <a href="/delete/<%=todos[i]._id%>"
+                ><span class="material-symbols-outlined"> cancel </span></a
+              >
             </div>
           </li>
-          <li class="todo">
-            <div class="todo-img"></div>
-            <div class="todo-content">
-              <h3>Apples</h3>
-              <p>Lorem ipsum dolor, sit...</p>
-            </div>
-            <div class="todo-btns">
-              <span class="material-symbols-outlined"> task_alt </span>
-              <span class="material-symbols-outlined"> cancel </span>
-            </div>
-          </li>
-          <li class="todo">
-            <div class="todo-img"></div>
-            <div class="todo-content">
-              <h3>Apples</h3>
-              <p>Lorem ipsum dolor, sit...</p>
-            </div>
-            <div class="todo-btns">
-              <span class="material-symbols-outlined"> task_alt </span>
-              <span class="material-symbols-outlined close"> cancel </span>
-            </div>
-          </li>
-          <li class="todo">
-            <div class="todo-img"></div>
-            <div class="todo-content">
-              <h3>Apples</h3>
-              <p>Lorem ipsum dolor, sit...</p>
-            </div>
-            <div class="todo-btns">
-              <span class="material-symbols-outlined"> task_alt </span>
-              <span class="material-symbols-outlined"> cancel </span>
-            </div>
-          </li>
+          <%}%>
         </ul>
       </div>
     </section>

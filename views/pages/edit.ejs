@@ -1,0 +1,36 @@
+<%- include("../partials/head")%>
+<body>
+  <%- include("../partials/header")%>
+  <div class="page-title">
+    <div class="sec-center">
+      <h1>My Todos > Edit</h1>
+    </div>
+  </div>
+  <main class="sec-center">
+    <section class="edit">
+      <form action="/edit/<%=todo._id%>" method="post" class="edit-form">
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value="<%=todo.title%>"
+        />
+        <textarea
+          name="description"
+          cols="30"
+          rows="10"
+          placeholder="Description"
+        >
+<%=todo.description%></textarea
+        >
+        <!-- <label for="file"
+          ><span class="material-symbols-outlined">image</span> upload
+          image</label
+        >
+        <input type="file" id="file" /> -->
+        <button class="btn">save edited todo</button>
+      </form>
+    </section>
+  </main>
+</body>
+<%- include("../partials/footer")%>

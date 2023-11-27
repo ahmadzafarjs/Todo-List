@@ -1,0 +1,20 @@
+<%- include("../partials/head")%>
+<body>
+  <%- include("../partials/header")%>
+  <div class="page-title">
+    <div class="sec-center">
+      <h1>My Todos > todo > <%=todo.title%></h1>
+    </div>
+  </div>
+  <main class="sec-center">
+    <section class="single-todo">
+      <h1><%=todo.title%></h1>
+      <p class="single-todo-description"><%=todo.description%></p>
+      <div class="single-todo-btns">
+        <a href="/edit/<%=todo._id%>"><button class="btn">edit</button></a>
+        <a href="/delete/<%=todo._id%>"><button class="btn">delete</button></a>
+      </div>
+    </section>
+  </main>
+</body>
+<%- include("../partials/footer")%>
