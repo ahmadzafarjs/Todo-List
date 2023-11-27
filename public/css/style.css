@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Ruthie&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.heading {
+  color: salmon;
+}
+:root {
+  --atomic: #ff9b71;
+  --space-cadet: #2d3047;
+  --icterine: #fffd82;
+  --bebas: "Bebas Neue";
+  --ruthie: "Ruthie";
+  --poppins: "Poppins";
+}
+
+p {
+  color: #555;
+}
+.btn {
+  padding: 13px 30px;
+  border: none;
+  background-color: var(--space-cadet);
+  color: var(--atomic);
+  font-family: "Poppins";
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--space-cadet);
+  color: var(--atomic);
+  font-size: 25px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn-icon:hover {
+  box-shadow: 4px 4px 0 var(--atomic);
+}
+.btn:hover {
+  box-shadow: 4px 4px 0 var(--atomic);
+}
+.material-symbols-outlined {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.material-symbols-outlined:hover {
+  transform: scale(1.1);
+}
+
+.sec-center {
+  width: 1100px;
+  margin: 0 auto;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* header  */
+.header-center {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+.header-center h2 {
+  color: var(--space-cadet);
+  font-family: var(--bebas);
+}
+a {
+  text-decoration: none;
+  font-family: var(--poppins);
+  color: var(--space-cadet);
+}
+/* footer */
+footer {
+  margin-top: auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+/* Todos  */
+.hero h1 {
+  font-size: 4rem;
+  color: var(--space-cadet);
+  font-family: var(--bebas);
+  margin: 3rem;
+}
+.todos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--icterine);
+  padding: 10px 15px;
+  list-style: none;
+  border-radius: 10px;
+}
+.todo-img {
+  width: 52px;
+  border-radius: 5px;
+  height: 52px;
+  background-color: var(--atomic);
+}
+.todo-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
